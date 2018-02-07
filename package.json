@@ -1,0 +1,25 @@
+{
+  "name": "pinksite",
+  "version": "1.0.0",
+  "description": "My first attempt to make an adaptive site by myself.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lifeless951/PinkSite.git"
+  },
+  "author": "Mihail Markin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lifeless951/PinkSite/issues"
+  },
+  "homepage": "https://github.com/Lifeless951/PinkSite#readme",
+  "devDependencies": {
+    "browser-sync": "^2.23.5",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  },
+  "dependencies": {}
+}

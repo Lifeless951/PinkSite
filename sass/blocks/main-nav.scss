@@ -1,0 +1,45 @@
+.main-nav
+{
+    display: flex;
+    flex-direction: column;
+
+    background-color: #283645;
+}
+
+.main-nav__toggle-wrapper
+{
+    display: flex;
+    padding: 22px 0 26px;
+    justify-content: space-between;
+
+    @include container();
+}
+
+.main-nav__list
+{
+    display: flex;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+
+    list-style: none;
+}
+
+.main-nav__item a
+{
+    display: block;
+    padding: 20px 0;
+    border-bottom: 1px solid #000;
+
+    font-size: 18px;
+    line-height: 32px;
+
+    background-color: #283645;
+
+    text-align: center;
+}
+
+.main-nav__item:first-child a{
+	border-top: 1px solid #000;
+}
