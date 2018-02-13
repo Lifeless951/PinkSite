@@ -5,22 +5,26 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+	<script src="js/script.js"></script>
 </head>
 <body>
 	<header class="page-header">
-		<nav class="main-nav"> <!-- Растянуть на 457px-->
-			<div class="main-nav__toggle-wrapper">
-				<div class="main-nav__logo">
-					<img src="img/logotype-white-mobile.png" alt="" width="" height="">
+		<nav class="main-nav main-nav--closed main-nav--no-js">
+			<div class="main-nav__wrapper">
+				<div class="main-nav__toggle-wrapper">
+					<div class="main-nav__logo">
+						<img src="img/logotype-white-mobile.png" alt="" width="" height="">
+					</div>
+					<button class="main-nav__toggle" type="button">Открыть меню</button>
 				</div>
-				<button class="main-nav__toggle" type="button">Открыть меню</button>
+				<ul class="main-nav__list">
+					<li class="main-nav__item"><a href="#">Главная</a></li>
+					<li class="main-nav__item"><a href="#">Фотографии</a></li>
+					<li class="main-nav__item"><a href="#">Конкурс</a></li>
+					<li class="main-nav__item"><a href="#">HTML Academy</a></li>
+				</ul>
 			</div>
-			<ul class="main-nav__list">
-				<li class="main-nav__item"><a href="#">Главная</a></li>
-				<li class="main-nav__item"><a href="#">Фотографии</a></li>
-				<li class="main-nav__item"><a href="#">Конкурс</a></li>
-				<li class="main-nav__item"><a href="#">HTML Academy</a></li>
-			</ul>
 		</nav>
 	</header>
 

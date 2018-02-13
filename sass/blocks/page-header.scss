@@ -1,4 +1,12 @@
 .page-header{
 	height: 462px;
-	background: #1c252f url(../../img/mobile-header-back.jpg) center no-repeat;
+	background: #1c252f url(../../img/mobile-header-back.jpg) top no-repeat;
+}
+
+@media (min-width: $tabletWidth){
+	.page-header{
+		height: 729px;
+		background-image: url(../../img/tablet-header-back.jpg); //приклей к фону 
+		//слоган "Взгляните на жизнь иначе!"
+	}
 }
