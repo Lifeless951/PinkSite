@@ -1,0 +1,125 @@
+.download{
+    width: 320px;
+    margin: 0 auto;
+    padding: 30px 0;
+
+    background-color: #1d2631;
+}
+
+.download__wrapper{
+    width: 280px;
+    margin: 0 auto;
+}
+
+.download__slogan{
+    display: none;
+}
+
+.download__btn{
+    display: block;
+    box-sizing: border-box;
+    margin-bottom: 33px;
+    padding: 14px 0;
+    border: 3px solid #fff;
+    border-radius: 100px;
+
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 18px;
+
+    color: #fff;
+
+    text-align: center;
+    text-decoration: none;
+}
+
+.download__btn:hover{
+	color: #d22856;
+	background-color: #fff;
+}
+
+.download__btn:active{
+	color: rgba(210, 40, 86, 0.3);
+}
+
+.download__description{
+    margin: 0;
+    padding: 0;
+    padding-top: 80px;
+
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+
+    color: #fff;
+
+    text-align: center;
+    background: url("../../img/mob-icons.png") center top no-repeat; 
+}
+
+@media (min-width: $tabletWidth){
+    .download{
+    	position: relative;
+    	height: 0;
+        padding: 0;
+        border: 0;
+
+        background-color: transparent;
+
+        @include container();
+    }
+
+    .download__wrapper{
+    	position: absolute;
+        width: 300px;
+        top: -523px;
+        margin: 0;
+    }
+
+    .download__slogan{
+        display: block;
+        margin: 0;
+	    margin-bottom: 35px;
+	    padding: 0 30px;
+
+	    font-size: 40px;
+	    font-weight: 300;
+	    line-height: 46px;
+
+	    color: #fff;
+
+	    text-align: center;
+	}
+
+	.download__btn{
+		margin-bottom: 45px;
+	}
+
+	.download__description{
+		padding-top: 95px;
+		font-size: 18px;
+		background-image: url("../../img/tab-icons.png");
+	}
+}
+
+@media (min-width: $desktopWidth){
+	.download__wrapper{
+	    top: -635px;
+	}
+
+	.download__slogan{
+		font-size: 50px;
+		line-height: 60px;
+		margin-bottom: 50px;
+	}
+
+	.download__btn{
+		margin-bottom: 68px;
+		font-size: 21px;
+		line-height: 21px;
+	}
+
+	.download__description{
+		padding-top: 112px;
+	}
+}

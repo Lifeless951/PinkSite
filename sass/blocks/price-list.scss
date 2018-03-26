@@ -1,0 +1,261 @@
+.price-list{
+	position: relative;
+    width: 320px;
+    margin: 0 auto;
+    padding: 90px 0 46px;
+
+    background-color: #f2f2f2;
+
+    overflow: hidden;
+
+    &::before{
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	width: 100%;
+    	height: 25px;
+    	content: "";
+    	background: linear-gradient(to bottom right, #fff 49%, #f2f2f2 51%);
+    }
+}
+
+.price-list__wrapper{
+    @include container();
+}
+
+.price-list__table{
+    width: 840px;
+    margin-bottom: 40px;
+
+    border-collapse: collapse;
+}
+
+.price-list__cell{
+    position: relative;
+
+    box-sizing: border-box;
+    width: 280px;
+    padding: 16px 17px 14px;
+    border: 2px solid #e5e5e5;
+
+    font-size: 14px;
+    line-height: 30px;
+
+    color: #283645;
+    background-color: #fff;
+
+    text-transform: uppercase;
+}
+
+.price-list__cell:nth-of-type(1){
+    display: none;
+}
+
+.price-list__row:nth-of-type(2) .price-list__cell::before{
+    content: 'Розовый фильтр';
+}
+
+.price-list__row:nth-of-type(3) .price-list__cell::before{
+    content: 'Смайлики';
+}
+
+.price-list__row:nth-of-type(4) .price-list__cell::before{
+    content: 'Комментарии';
+}
+
+.price-list__cell--yes::after,
+.price-list__cell--no::after{
+    position: absolute;
+
+    display: inline-block;
+
+    content: '';
+}
+
+.price-list__cell--yes::after{
+    top: 20px;
+    right: 17px;
+
+    width: 31px;
+    height: 21px;
+
+    background: url("../../img/icons/icon-yes.svg") no-repeat center;
+    content: "";
+}
+
+.price-list__cell--no::after{
+    top: 15px;
+    right: 19px;
+
+    width: 27px;
+    height: 26px;
+
+    background: url("../../img/icons/icon-no.svg") no-repeat center;
+}
+
+.price-list__cell--header{
+    position: relative;
+
+    padding: 17px 0 21px;
+    border-top-color: #283645;
+    border-bottom-color: #283645;
+
+    font-size: 18px;
+
+    color: #fff;
+    background-color: #283645;
+
+    overflow: hidden;
+
+    &:nth-child(1){
+        visibility: hidden;
+        border-bottom: none;
+    }
+}
+
+.price-list__type{
+    display: block;
+    margin-bottom: 5px;
+
+    text-align: center;
+}
+
+.price-list__price{
+    display: block;
+
+    font-size: 24px;
+    font-weight: 300;
+
+    text-align: center;
+}
+
+.price-list__cell--hit::before{
+    position: absolute;
+    top: 10px;
+    left: -27px;
+
+    display: block;
+    width: 105px;
+
+    font-weight: normal;
+
+    background-color: #d22856;
+
+    content: 'Хит';
+    transform: rotate(-45deg);
+    text-transform: uppercase;
+}
+
+@media (min-width: $tabletWidth){
+    .price-list{
+        width: 700px;
+        padding: 95px 0 68px;
+
+        &::before{
+        	height: 60px;
+        }
+    }
+
+    .price-list__table{
+        box-sizing: border-box;
+        width: 100%;
+        margin-bottom: 0;
+        margin-left: 0 !important;
+    }
+
+    .price-list__cell{
+        width: 157px;
+        padding-top: 5px;
+	    padding-bottom: 9px;
+	    padding-left: 15px;
+    }
+
+    .price-list__cell--header{
+        padding: 10px 0 6px;
+    }
+
+    .price-list__cell:nth-of-type(1){
+        display: table-cell;
+    }
+
+    .price-list__cell::before{
+        display: none;
+    }
+
+    .price-list__cell--header::before{
+        display: block;
+
+        font-size: 14px;
+    }
+
+    .price-list__cell::after{
+        position: absolute;
+    }
+
+    .price-list__cell:nth-child(1){
+        font-size: 14px;
+
+        text-transform: none;
+    }
+
+    .price-list__cell--yes::after{
+        top: 13px;
+        left: 61px;
+    }
+
+    .price-list__cell--no::after{
+        top: 9px;
+        left: 63px;
+    }
+
+    .price-list__type{
+        margin-bottom: 0;
+
+        font-size: 16px;
+    }
+
+    .price-list__price{
+        font-size: 18px;
+    }
+}
+
+@media(min-width: $desktopWidth){
+	.price-list{
+		width: 1200px;
+		padding: 150px 0 96px;
+
+		&::before{
+			height: 85px;
+		}
+	}
+
+	.price-list__cell:nth-child(1){
+		font-size: 18px;
+	}
+
+	.price-list__cell{
+		padding: 18px 23px 16px;
+	}
+	
+	.price-list__cell--header{
+		padding: 16px 0 20px;
+	}
+
+	.price-list__cell--yes::after{
+		top: 22px;
+		left: 101px;
+	}
+
+	.price-list__cell--no::after{
+		top: 16px;
+		left: 103px;
+	}
+
+	.price-list__type{
+		font-size: 18px;
+	}
+
+	.price-list__price{
+		font-size: 24px;
+	}
+}

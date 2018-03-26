@@ -1,0 +1,23 @@
+.map{
+	width: 320px;
+	height: 200px;
+	margin: 0 auto;
+	overflow: hidden;
+	background-color: gray;
+}
+
+
+@media (min-width: $tabletWidth){
+	.map{
+		width: 700px;
+		height: 380px;
+	}	
+}
+
+
+@media (min-width: $desktopWidth){
+	.map{
+		width: 1200px;
+		height: 500px;
+	}
+}

@@ -4,7 +4,9 @@
   "description": "My first attempt to make an adaptive site by myself.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build",
+    "start": "npm run build && gulp browser-sync"
   },
   "repository": {
     "type": "git",
@@ -17,9 +19,20 @@
   },
   "homepage": "https://github.com/Lifeless951/PinkSite#readme",
   "devDependencies": {
+    "autoprefixer": "^8.1.0",
     "browser-sync": "^2.23.5",
+    "css-mqpacker": "^6.0.2",
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
-    "gulp-sass": "^3.1.0"
+    "gulp-csso": "^3.0.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-svgmin": "^1.2.4",
+    "gulp-svgstore": "^6.1.1",
+    "run-sequence": "^2.2.1"
   },
   "dependencies": {}
 }

@@ -1,0 +1,122 @@
+.page-footer{
+    display: none;
+}
+
+.page-footer__wrapper{
+    @include container();
+}
+
+@media (min-width: $tabletWidth){
+    .page-footer{
+        display: block;
+        width: 700px;
+        margin: 0 auto;
+        padding: 36px 0 37px;
+    }
+
+    .page-footer__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .page-footer__logo{
+        width: 150px;
+        height: 40px;
+        align-self: flex-start;
+    }
+
+    .page-footer__social-list{
+        display: flex;
+        width: 190px;
+        margin: 0;
+        padding: 0;
+        justify-content: space-around;
+
+        list-style: none;
+    }
+
+    .page-footer__social-link{
+	    display: block;
+        position: relative;
+
+        box-sizing: border-box;
+        width: 51px;
+        height: 51px;
+        border: 3px solid rgba(40, 54, 69, .2);
+        border-radius: 50%;
+
+        font-size: 0;
+
+        &:hover{
+        	border-color: rgba(40, 54, 69, 1);
+        }
+
+        &:active{
+        	border-color: rgba(40, 54, 69, .2);
+        }
+    }
+
+    .page-footer__social-link--fb{
+    	background: url("../../img/facebook.png") no-repeat 18px 13px;
+    }
+
+    .page-footer__social-link--tw{
+    	background: url("../../img/twitter.png") no-repeat center center;
+    }
+
+    .page-footer__social-link--yt{
+    	background: url("../../img/youtube.png") no-repeat 17px 16px;
+    }
+
+    .page-footer__social-link--fb:active{
+    	background: url("../../img/facebook_active.png") no-repeat 18px 13px;
+    }
+
+    .page-footer__social-link--tw:active{
+    	background: url("../../img/twitter_active.png") no-repeat center center;
+    }
+
+    .page-footer__social-link--yt:active{
+    	background: url("../../img/youtube__active.png") no-repeat 17px 16px;
+    }
+
+    .page-footer__copyrights{
+    	display: flex;
+    	justify-content: space-between;
+    	align-items: flex-end;
+        width: 150px;
+	    box-sizing: border-box;
+	    padding-left: 20px;
+    }
+
+    .page-footer__copyrights b{
+    	align-self: center;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 18px;
+
+        color: #283645;
+    }
+
+    .page-footer__copyrights svg{
+    	width: 27px;
+    	height: 34px;
+    	fill: #d22856;
+    }
+
+    .page-footer__copyrights a:hover > svg{
+    	fill: #000;
+    }
+}
+
+@media (min-width: $desktopWidth){
+    .page-footer{
+        width: 1200px;
+        padding: 70px 0 72px;
+    }
+
+    .page-footer__copyrights{
+    	padding-left: 0;
+    }
+}

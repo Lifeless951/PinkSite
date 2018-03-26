@@ -1,12 +1,22 @@
 .page-header{
+	width: 320px;
+	margin: 0 auto;
 	height: 462px;
-	background: #1c252f url(../../img/mobile-header-back.jpg) top no-repeat;
+	background: #1c252f url("../../img/mobile-header-back.jpg") top no-repeat;
 }
 
 @media (min-width: $tabletWidth){
 	.page-header{
+		width: 700px;
 		height: 729px;
-		background-image: url(../../img/tablet-header-back.jpg); //приклей к фону 
-		//слоган "Взгляните на жизнь иначе!"
+		background-image: url("../../img/tablet-header-back.jpg");
+	}
+}
+
+@media (min-width: $desktopWidth){
+	.page-header{
+		width: 1200px;
+		height: 854px;
+		background-image: url("../../img/desktop-header-back.jpg");
 	}
 }

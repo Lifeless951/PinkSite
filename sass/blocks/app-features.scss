@@ -1,0 +1,320 @@
+.app-features{
+    width: 320px;
+    margin: 0 auto;
+
+    background-color: #fff;
+}
+
+.app-features__header{
+    padding: 47px 0 33px;
+
+    background-color: #fff;
+}
+
+.app-features__header-wrapper{
+    @include container();
+}
+
+.app-features__header-wrapper p{
+    margin: 0;
+    margin-bottom: 40px;
+    padding: 0;
+
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 29px;
+
+    color: #283645;
+
+    text-align: center;
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+
+.app-features__wrapper{
+	position: relative;
+    padding: 87px 0 317px;
+    overflow: hidden;
+
+    background: #f2f2f2;
+
+    &::before{
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	content: "";
+    	width: 100%;
+    	height: 35px;
+    	background: linear-gradient(to bottom right, #fff 49%, #f2f2f2 51%);
+    }
+
+    &::after{
+    	content: "";
+    	position: absolute;
+    	width: 157px;
+    	height: 320px;
+    	background: url("../../img/iphone_screen_3.png") no-repeat center;
+	    margin-top: 42px;
+	    left: calc(50% - 157px / 2);
+    }
+}
+
+.app-features__list{
+    box-sizing: border-box;
+    padding: 0;
+
+    color: #000;
+
+    list-style: none;
+
+    @include container();
+}
+
+.app-features__item{
+    margin-bottom: 35px;
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+
+.app-features__title{
+    margin: 0;
+    margin-bottom: 12px;
+
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+
+    text-align: center;
+}
+
+.app-features__description{
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 24px;
+
+    color: #283645;
+
+    text-align: center;
+}
+
+.app-features__footer{
+    display: none;
+}
+
+@media (min-width: $tabletWidth){
+    .app-features__header{
+        padding: 48px 0 45px 0;
+    }
+
+    .app-features__header-wrapper p{
+        margin-bottom: 0;
+
+        font-size: 40px;
+        line-height: 48px;
+
+        &:last-child{
+            padding: 0 20px;
+        }
+    }
+
+    .app-features{
+        box-sizing: border-box;
+        width: 700px;
+    }
+
+    .app-features__wrapper{
+        padding: 77px 0 43px 0;
+
+        &::before{
+        	height: 60px;
+        }
+
+        &::after{
+        	background: none;
+        	display: none;
+        }
+    }
+
+    .app-features__list{
+    	position: relative;
+        padding: 0 0 0 310px;
+
+        &::before{
+        	position: absolute;
+			content: "";
+	        background: url("../../img/iphone_screen_3_tablet.png") no-repeat center;
+	        width: 268px;
+	        height: 548px;
+	        top: -68px;
+	        left: 0;
+        }
+    }
+
+    .app-features__item{
+        margin-bottom: 35px;
+    }
+
+    .app-features__title,
+    .app-features__description{
+        text-align: left;
+    }
+
+    .app-features__footer{
+        display: block;
+
+        background-color: #fff;
+    }
+
+    .app-features__footer-wrapper{
+        box-sizing: border-box;
+        padding: 95px 0 75px 310px;
+        background: url("../../img/watch_24_tablet.png") no-repeat left center;
+
+        @include container();
+    }
+
+    .app-features__footer-wrapper .app-features__title{
+        margin-bottom: 10px;
+
+        font-size: 30px;
+        line-height: 36px;
+        white-space: pre-line;
+    }
+
+    .app-features__footer-wrapper .app-features__description{
+        margin-bottom: 10px;
+    }
+
+    .app-features__link{
+        font-size: 14px;
+        line-height: 24px;
+
+        color: #d22856;
+    }
+}
+
+@media (min-width: $desktopWidth){
+    .app-features{
+        width: 1200px;
+    }
+
+    .app-features__header{
+        padding: 66px 0 77px;
+    }
+
+    .app-features__header-wrapper p{
+        font-size: 50px;
+        line-height: 60px;
+
+        &:last-child{
+            padding: 0 200px;
+        }
+    }
+
+    .app-features__wrapper{
+        padding: 95px 0 65px;
+
+        &::before{
+        	height: 95px;
+        }
+    }
+
+    .app-features__list{
+        display: flex;
+        padding: 0;
+        justify-content: space-around;
+
+        &::before{
+        	display: none;
+        }
+    }
+
+    .app-features__item{
+        width: 240px;
+        margin-bottom: 0;
+    }
+
+    .app-features__title,
+    .app-features__description{
+        text-align: center;
+    }
+
+    .app-features__wrapper .app-features__title{ //Надо было ставить псевдо-эл. и отступы на li
+    	position: relative;
+    	padding-top: 365px;
+    	margin-top: -105px;
+
+    	&::before{
+    		content: "";
+    		position: absolute;
+		    top: 10px;
+	        left: -24px;
+    		width: 294px;
+    		height: 301px;
+    		background: url("../../img/iphone_screen_desk_1.png") no-repeat center top; 
+    	}
+    }
+
+    .app-features__item:nth-of-type(2) .app-features__title::before{
+    	background-image: url("../../img/iphone_screen_desk_2.png");
+    }
+
+    .app-features__item:nth-of-type(3) .app-features__title::before{
+    	background-image: url("../../img/iphone_screen_desk_3.png");
+    }
+
+    .app-features__title{
+        margin-bottom: 30px;
+
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .app-features__description{
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .app-features__footer{
+        display: block;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 68px;
+
+        background-color: #f2f2f2;
+    }
+
+    .app-features__footer-wrapper{
+        padding: 87px 0 50px 367px;
+    }
+
+    .app-features__footer-wrapper .app-features__description{
+        margin-bottom: 30px;
+    }
+
+    .app-features__footer-wrapper .app-features__title{
+	    white-space: normal;
+        margin-bottom: 21px;
+    }
+
+    .app-features__footer-wrapper .app-features__description,
+    .app-features__footer-wrapper .app-features__title{
+        text-align: left;
+    }
+
+    .app-features__link{
+        border-bottom: 1px solid #d22856;
+
+        font-size: 18px;
+        line-height: 30px;
+
+        color: #d22856;
+
+        text-decoration: none;
+    }
+}
